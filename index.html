@@ -1,63 +1,102 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset = "utf-8">
-  <meta name ="author" content="Ilana Kim">
-  <link rel="icon" href="favicon.ico" type ="image/x-icon">
-  <Title> kimilana.github.io </Title>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>This is my page</p>
 
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <!-- <script src = "script.js" defer></script> -->
+    <form>
+      <h1> Payment form </h1>
+      <p> Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
 
-</head>
+      <section>
+    <h2>Contact information</h2>
+    <fieldset>
+      <legend>Title</legend>
+      <ul>
+          <li>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="K">
+              King
+            </label>
+          </li>
+          <li>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="Q">
+              Queen
+            </label>
+          </li>
+          <li>
+            <label for="title_3">
+              <input type="radio" id="title_3" name="title" value="J">
+              Joker
+            </label>
+          </li>
+      </ul>
+    </fieldset>
+    <p>
+      <label for="name">
+        <span>Name: </span>
+        <strong><span aria-label="required">*</span></strong>
+      </label>
+      <input type="text" id="name" name="username">
+    </p>
+    <p>
+      <label for="mail">
+        <span>E-mail: </span>
+        <strong><span aria-label="required">*</span></strong>
+      </label>
+      <input type="email" id="mail" name="usermail">
+    </p>
+    <p>
+      <label for="pwd">
+        <span>Password: </span>
+        <strong><span aria-label="required">*</span></strong>
+      </label>
+      <input type="password" id="pwd" name="password">
+    </p>
+</section>
+
+<section>
+    <h2>Payment information</h2>
+    <p>
+      <label for="card">
+        <span>Card type:</span>
+      </label>
+      <select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </p>
+    <p>
+      <label for="number">
+        <span>Card number:</span>
+        <strong><span aria-label="required">*</span></strong>
+      </label>
+      <input type="tel" id="number" name="cardnumber">
+    </p>
+    <p>
+      <label for="expiration">
+        <span>Expiration date:</span>
+        <strong><span aria-label="required">*</span></strong>
+      </label>
+      <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+    </p>
+</section>
+
+<section>
+    <p>
+      <button type="submit">Validate the payment</button>
+    </p>
+</section>
 
 
-<body>
-<h1>Quick Hummus Recipe </h1>
-<!-- comment
-<p> This is my <strong>page</strong></p>
-<p> A link to the <a href = "http://mozilla.org" title = "Mozilla Webpage"> Mozilla Webpage </a>. </p>
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
--->
 
-</head>
- <body>
-   Quick hummus recipe
+    </form>
 
-   This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
-
-   Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.
-
-   Ingredients
-
-   1 can (400g) of chick peas (garbanzo beans)
-   175g of tahini
-   6 sundried tomatoes
-   Half a red pepper
-   A pinch of cayenne pepper
-   1 clove of garlic
-   A dash of olive oil
-
-   Instructions
-
-   Remove the skin from the garlic, and chop coarsely
-   Remove all the seeds and stalk from the pepper, and chop coarsely
-   Add all the ingredients into a food processor
-   Process all the ingredients into a paste.
-   If you want a coarse "chunky" hummus, process it for a short time
-   If you want a smooth hummus, process it for a longer time
-
-   For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.
-
-   Storage
-
-   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
-
-   Hummus is suitable for freezing; you should thaw it and use it within a couple of months.
-
-
- </body>
-</html>
-
-</body>
+  </body>
 </html>
