@@ -1,21 +1,40 @@
-const list = document.createElement('ul');
-const info = document.createElement('p');
-const html = document.querySelector('html');
+// setup canvas
 
-info.textContent = "Below is a dynamic list. Click anywhere on the page to add a new list item. Click an existing list item to change its text to something else.";
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
-document.body.appendChild(info);
-document.body.appendChild(list);
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
 
-html.onclick = function() {
-  const listItem = document.createElement("li");
-  const listContent = prompt('What content do you want the list item to have?');
-  listItem.textContent = listContent;
-  list.appendChild(listItem);
+// function to generate random number
 
-  listItem.onclick = function(e) {
-    e.stopPropagation();
-    const listContent = prompt('Enter new content for your list item');
-    this.textContent = listContent;
-  }
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+// function to generate random color
+
+function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+
+class Ball {
+
+   constructor(x, y, velX, velY, color, size) {
+      this.x = x;
+      this.y = y;
+      this.velX = velX;
+      this.velY = velY;
+      this.color = color;
+      this.size = size;
+   }
+
+}
+
+draw() {
+  ctx.beginPath();
+  ctx.fillStyle = this.color;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.fill();
 }
